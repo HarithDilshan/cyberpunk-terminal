@@ -1,16 +1,79 @@
-# React + Vite
+# 🖥️ Cyberpunk Terminal Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A retro-futuristic terminal dashboard with authentic CRT screen effects, built with React and pure CSS.
 
-Currently, two official plugins are available:
+![Cyberpunk Terminal](https://via.placeholder.com/800x400/000000/00ff00?text=Add+Screenshot+Here)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- 🎮 Authentic CRT screen effects (scanlines, phosphor glow, screen curvature)
+- 🚀 Epic boot sequence animation
+- 📊 Real-time system monitoring
+- 💻 Interactive command system
+- 🎨 Multiple retro color themes (Green, Amber, Cyan, IBM)
+- 🌧️ Matrix rain easter egg
+- ⌨️ Keyboard shortcuts
+- 📱 Responsive design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+[View Live Demo](https://cyberpunk-terminal.vercel.app)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- React 18
+- Vite
+- CSS3 (No external CSS libraries!)
+- JavaScript ES6+
+
+## 📦 Installation
+```bash
+# Clone the repository
+git clone https://github.com/HarithDilshan/cyberpunk-terminal
+
+# Navigate to project directory
+cd cyberpunk-terminal
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+🎮 Usage
+Available Commands
+help - Display all available commands
+clear - Clear the terminal screen
+status - Show system status
+monitor - Toggle system monitor view
+matrix - Enter the matrix (easter egg!)
+neofetch - Display system information
+hack [target] - Initiate hacking sequence
+And more…
+
+Keyboard Shortcuts
+Ctrl + L - Clear screen
+Ctrl + C - Cancel current input
+↑/↓ - Navigate command history
+Space - Skip boot sequence
+
+Theme Switching
+Click the theme button in the top-right corner to switch between:
+Green Phosphor (Classic)
+Amber Terminal
+Cyan Matrix
+Classic IBM
+Apple II
+
+🤝 Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+📝 License
+This project is open source and available under the MIT License.
+👏 Acknowledgments
+Inspired by classic terminals and cyberpunk aesthetics
+ASCII art generated using various tools
+Built as a demonstration of retro-futurism in modern web development
+
+📧 Contact
+Your Name - @harithdilshan89
+Project Link: https://github.com/HarithDilshan/cyberpunk-terminal
