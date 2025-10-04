@@ -2,7 +2,8 @@
 
 A retro-futuristic terminal dashboard with authentic CRT screen effects, built with React and pure CSS.
 
-![Cyberpunk Terminal](https://via.placeholder.com/800x400/000000/00ff00?text=Add+Screenshot+Here)
+<img width="2928" height="1498" alt="image" src="https://github.com/user-attachments/assets/ab18cfd5-2720-46aa-94e8-35a9b7b54613" />
+
 
 ## ✨ Features
 
