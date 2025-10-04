@@ -1,0 +1,224 @@
+/* ====================================
+   System Monitor Styling
+   ==================================== */
+
+   .system-monitor {
+    padding: 20px;
+    color: #33ff33;
+    font-family: 'Courier New', 'Courier', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  
+  .monitor-header {
+    margin-bottom: 30px;
+  }
+  
+  .header-art {
+    color: #33ff33;
+    text-shadow: 
+      0 0 8px #33ff33,
+      0 0 15px #00ff00;
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .monitor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .monitor-section {
+    background: rgba(0, 20, 0, 0.3);
+    border: 1px solid rgba(51, 255, 51, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 
+      inset 0 0 20px rgba(0, 255, 0, 0.05),
+      0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .monitor-section-wide {
+    grid-column: 1 / -1;
+  }
+  
+  .section-title {
+    color: #00ff00;
+    text-shadow: 
+      0 0 10px #00ff00,
+      0 0 20px #00ff00;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+  
+  .section-footer {
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+    margin-top: 15px;
+    opacity: 0.7;
+  }
+  
+  /* Stat Rows */
+  .stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 4px 8px;
+  }
+  
+  .stat-label {
+    color: #00cc00;
+    text-shadow: 0 0 5px #00cc00;
+  }
+  
+  .stat-value {
+    color: #33ff33;
+    text-shadow: 0 0 8px #33ff33;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .stat-value-center {
+    color: #33ff33;
+    text-shadow: 0 0 8px #33ff33;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  /* Bar Graphs */
+  .stat-bar {
+    margin-bottom: 15px;
+    padding: 4px 8px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #00ff00;
+    text-shadow: 0 0 8px #00ff00;
+    font-weight: bold;
+  }
+  
+  .upload-bar {
+    color: #ff9900;
+    text-shadow: 0 0 8px #ff9900;
+  }
+  
+  .download-bar {
+    color: #00ccff;
+    text-shadow: 0 0 8px #00ccff;
+  }
+  
+  /* Mini Chart */
+  .mini-chart-label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .mini-chart {
+    font-size: 11px;
+    line-height: 1.2;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+  }
+  
+  .chart-labels {
+    margin-top: 2px;
+    letter-spacing: 4px;
+    color: #00cc00;
+    font-size: 10px;
+  }
+  
+  /* Process Table */
+  .process-table {
+    margin: 15px 0;
+  }
+  
+  .process-header,
+  .process-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 100px 120px;
+    gap: 15px;
+    padding: 8px;
+    border-bottom: 1px solid rgba(51, 255, 51, 0.2);
+  }
+  
+  .process-header {
+    color: #00ff00;
+    text-shadow: 0 0 8px #00ff00;
+    font-weight: bold;
+    border-bottom: 2px solid rgba(51, 255, 51, 0.5);
+    margin-bottom: 5px;
+  }
+  
+  .process-row {
+    color: #00cc00;
+    transition: all 0.2s ease;
+  }
+  
+  .process-row:hover {
+    background: rgba(0, 255, 0, 0.1);
+    color: #33ff33;
+    text-shadow: 0 0 5px #33ff33;
+  }
+  
+  .process-pid,
+  .process-cpu,
+  .process-mem {
+    text-align: right;
+  }
+  
+  .process-name {
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Info Rows */
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(51, 255, 51, 0.1);
+  }
+  
+  .info-label {
+    color: #00cc00;
+    text-shadow: 0 0 5px #00cc00;
+    font-weight: bold;
+  }
+  
+  .info-value {
+    color: #33ff33;
+    text-shadow: 0 0 8px #33ff33;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1200px) {
+    .monitor-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .system-monitor {
+      font-size: 11px;
+    }
+    
+    .process-header,
+    .process-row {
+      grid-template-columns: 60px 1fr 80px 100px;
+      gap: 10px;
+    }
+  }

@@ -1,0 +1,200 @@
+/* ====================================
+   Terminal Styling
+   ==================================== */
+
+   .terminal-container {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    font-family: 'Courier New', 'Courier', monospace;
+    position: relative;
+    z-index: 1;
+    cursor: text;
+  }
+  
+  /* Custom scrollbar */
+  .terminal-container::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .terminal-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .terminal-container::-webkit-scrollbar-thumb {
+    background: rgba(51, 255, 51, 0.3);
+    border-radius: 6px;
+  }
+  
+  .terminal-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(51, 255, 51, 0.5);
+  }
+  
+  .terminal-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .terminal-line {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+  
+  .terminal-line-command .terminal-text {
+    color: #33ff33;
+    font-weight: 500;
+  }
+  
+  .terminal-line-output .terminal-text {
+    color: #00cc00;
+    padding-left: 8px;
+  }
+  
+  .terminal-line-error .terminal-text {
+    color: #ff3333;
+    text-shadow: 
+      0 0 5px #ff3333,
+      0 0 10px #ff3333;
+  }
+  
+  .terminal-line-system .terminal-text {
+    color: #ffaa00;
+    text-shadow: 
+      0 0 5px #ffaa00,
+      0 0 10px #ffaa00;
+  }
+  
+  /* Prompt styling */
+  .terminal-prompt {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  .prompt-user {
+    color: #00ff00;
+    text-shadow: 0 0 8px #00ff00;
+    font-weight: bold;
+  }
+  
+  .prompt-separator {
+    color: #33ff33;
+    margin: 0 2px;
+  }
+  
+  .prompt-host {
+    color: #00cccc;
+    text-shadow: 0 0 8px #00cccc;
+    font-weight: bold;
+  }
+  
+  .prompt-path {
+    color: #3366ff;
+    text-shadow: 0 0 8px #3366ff;
+    font-weight: bold;
+  }
+  
+  .prompt-symbol {
+    color: #33ff33;
+    margin-left: 4px;
+    font-weight: bold;
+  }
+  
+  /* Input form and styling */
+  .terminal-input-form {
+    width: 100%;
+  }
+  
+  .terminal-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #33ff33;
+    font-family: 'Courier New', 'Courier', monospace;
+    font-size: 14px;
+    flex: 1;
+    min-width: 0;
+    text-shadow: 
+      0 0 5px #33ff33,
+      0 0 10px #33ff33;
+    caret-color: transparent; /* Hide default caret, we'll use custom cursor */
+  }
+  
+  .terminal-input::selection {
+    background: rgba(51, 255, 51, 0.3);
+  }
+  
+  /* Hide the actual input but keep it functional */
+.terminal-input-hidden {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+/* Display the text separately */
+.terminal-line-input .terminal-text {
+  color: #33ff33;
+  font-weight: 500;
+  text-shadow: 
+    0 0 5px #33ff33,
+    0 0 10px #33ff33;
+}
+
+/* Custom blinking cursor - appears right after text */
+.cursor-blink {
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  background: #33ff33;
+  margin-left: 2px;
+  animation: blink-cursor 1s step-end infinite;
+  box-shadow: 0 0 8px #33ff33;
+  vertical-align: text-bottom;
+  position: relative;
+  top: 2px;
+}
+  
+  @keyframes blink-cursor {
+    0%, 50% {
+      opacity: 1;
+    }
+    51%, 100% {
+      opacity: 0;
+    }
+  }
+  
+  /* Text selection */
+.terminal-text::selection {
+  background: rgba(51, 255, 51, 0.3);
+}
+
+  /* Line-specific styles */
+  .terminal-line-input {
+    margin-bottom: 0;
+    position: relative;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .terminal-container {
+      padding: 10px;
+    }
+  
+    .terminal-input {
+      font-size: 12px;
+    }
+  
+    .prompt-user,
+    .prompt-host,
+    .prompt-path {
+      font-size: 12px;
+    }
+  }

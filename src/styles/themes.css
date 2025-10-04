@@ -1,0 +1,93 @@
+/* ====================================
+   Color Themes
+   ==================================== */
+
+   :root {
+    --primary-color: #33ff33;
+    --secondary-color: #00ff00;
+    --glow-color: #00ff00;
+    --background: #000000;
+    --background-alt: #0a0a0a;
+  }
+  
+  /* Green Phosphor (Default) */
+  [data-theme="green"] {
+    --primary-color: #33ff33;
+    --secondary-color: #00ff00;
+    --glow-color: #00ff00;
+    --background: #000000;
+    --background-alt: #001100;
+  }
+  
+  /* Amber Terminal */
+  [data-theme="amber"] {
+    --primary-color: #ffaa00;
+    --secondary-color: #ff8800;
+    --glow-color: #ff8800;
+    --background: #000000;
+    --background-alt: #110800;
+  }
+  
+  /* Cyan Matrix */
+  [data-theme="cyan"] {
+    --primary-color: #00ffff;
+    --secondary-color: #00cccc;
+    --glow-color: #00cccc;
+    --background: #000000;
+    --background-alt: #001a1a;
+  }
+  
+  /* Classic IBM */
+  [data-theme="ibm"] {
+    --primary-color: #00ff00;
+    --secondary-color: #00cc00;
+    --glow-color: #00cc00;
+    --background: #000080;
+    --background-alt: #000066;
+  }
+  
+  /* Apple II Green */
+  [data-theme="apple"] {
+    --primary-color: #33ff33;
+    --secondary-color: #00ff00;
+    --glow-color: #00ff00;
+    --background: #000000;
+    --background-alt: #000000;
+  }
+  
+  /* Apply theme colors */
+  .crt-screen {
+    background: var(--background);
+  }
+  
+  .terminal-text,
+  .boot-line,
+  .stat-value,
+  .process-row {
+    color: var(--primary-color) !important;
+    text-shadow: 
+      0 0 5px var(--glow-color),
+      0 0 10px var(--glow-color),
+      0 0 15px var(--glow-color) !important;
+  }
+  
+  .terminal-prompt .prompt-user,
+  .section-title,
+  .header-art {
+    color: var(--secondary-color) !important;
+    text-shadow: 
+      0 0 8px var(--glow-color),
+      0 0 15px var(--glow-color) !important;
+  }
+  
+  .cursor {
+    background: var(--primary-color) !important;
+    box-shadow: 0 0 10px var(--glow-color) !important;
+  }
+  
+  .power-led {
+    background: var(--secondary-color) !important;
+    box-shadow: 
+      0 0 10px var(--glow-color),
+      0 0 20px var(--glow-color) !important;
+  }

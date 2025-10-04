@@ -1,0 +1,39 @@
+.boot-sequence {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+  
+  .boot-content {
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .boot-line {
+    color: #33ff33;
+    font-family: 'Courier New', 'Courier', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    text-shadow: 
+      0 0 5px #33ff33,
+      0 0 10px #33ff33;
+    margin-bottom: 4px;
+    white-space: pre;
+    animation: fadeIn 0.1s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .boot-line:empty {
+    height: 1.6em;
+  }
